@@ -18,7 +18,7 @@ x-airflow-common:
     SNOWFLAKE_USER: ${SNOWFLAKE_USER}
     SNOWFLAKE_PASSWORD: ${SNOWFLAKE_PASSWORD}
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
-    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://docker:docker@db/postgres
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@db/airflow
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__TEST_CONNECTION: 'Enabled'
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
