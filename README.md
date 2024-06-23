@@ -49,3 +49,10 @@ AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@db/air
 docker compose down db
 docker compose up
 ```
+
+#### To access into mysql
+```bash
+docker exec -it airbyte_project-mysql-1 /bin/bash
+mysql --user=docker --password data
+SHOW TABLES;
+```

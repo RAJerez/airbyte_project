@@ -1,0 +1,15 @@
+checks for labeled_transactions:
+  - row_count > 0:
+      name: Table is empty
+  - duplicate_count(transaction_id) = 0:
+      name: Duplicate transaction ids
+  - schema:
+      fail:
+        when required column missing: ["TRANSACTION_ID", "IS_FRAUD"]
+  - missing_count(transaction_id) = 0:
+      name: Transaction ids cannot be null
+  # TODO : Check the cause of null boolean values
+  # - missing_count(is_fraud) = 0:
+      # name: Is fraud values cannot be null
+  - values in (transaction_id) must exist in customer_transactions (transaction_id):
+      name: Transaction IDs don't match with the reference table
