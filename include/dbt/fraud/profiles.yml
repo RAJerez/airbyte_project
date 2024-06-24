@@ -1,7 +1,7 @@
 fraud:
   outputs:
     dev:
-      account: ig91942.eu-west-3.aws
+      account: gt80688.sa-east-1.aws
       database: AIRBYTE_DATABASE
       password: snowflake
       role: AIRBYTE_ROLE
